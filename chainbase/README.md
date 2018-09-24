@@ -133,10 +133,15 @@ class undo_state
         // 数据对象id (id_type) 的set
         typedef boost::interprocess::set< id_type, std::less<id_type>, id_allocator_type >                    id_type_set;
 
+        // 缓存被修改前的对象
         id_value_type_map            old_values;
+        // 缓存被删除的对象
         id_value_type_map            removed_values;
+        // 缓存新添加的对象（通过id记录) 
         id_type_set                  new_ids;
+        // 启动session前的下一可用对象id
         id_type                      old_next_id = 0;
+        // session的revision号 
         int64_t                      revision = 0;
 };
 ```
