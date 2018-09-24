@@ -76,8 +76,8 @@ class oid {
 template<uint16_t TypeNumber, typename Derived>
 struct object
 {
-    typedef oid<Derived> id_type;                // 定义本模版实例的对象id类型
-    static const uint16_t type_id = TypeNumber;  // 定义本模版实例的类型id
+    typedef oid<Derived> id_type;                // 定义本模版实例的对象id类型
+    static const uint16_t type_id = TypeNumber;  // 定义本模版实例的类型id
 };
 ```
 
