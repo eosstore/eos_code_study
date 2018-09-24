@@ -8,7 +8,7 @@ chainbase依赖于boost.interprocess，进而依赖nmap实现文件到内存映�
 chainbase::database中每个表由MultiIndex（使用static const uint16_t type_id标识)表示，每个表存储一种类型的对象，
 每个对象使用oid<Object> id 作为主键
 
-chainbase使用状态栈保存数据的改动，
+chainbase使用状态栈保存数据的改动，
 
 #
 <span style="color:pink">
@@ -44,7 +44,7 @@ constexpr char _db_dirty_flag_string[] = "db_dirty_flag";
 
 #
 <span style="color:pink">
-以下代码：共享内存互斥保护
+以下代码：共享内存互斥保护
 </span>
 
 ```cpp
@@ -107,7 +107,7 @@ OBJECT_TYPE( Constructor&& c, Allocator&&  ) { c(*this); }
 
 #
 <span style="color:pink">
-以下代码：定义数据操作（添加，修改，删除）undo缓存
+以下代码：定义数据操作（添加，修改，删除）undo缓存
 </span>
 
 ```cpp
@@ -143,7 +143,7 @@ class undo_state
 
 #
 <span style="color:pink">
-以下代码：定义managed_mapped_file中索引表的操作类
+以下代码：定义managed_mapped_file中索引表的操作类
 </span>
 
 ```cpp
@@ -299,7 +299,7 @@ class generic_index{
 ```
 
 <span style="color:pink">
-以下代码：定义数据仓库，数据仓库用于增加，查找表；以及增加，查找，修改，删除表中的数据对象，此数据仓库database的对象通过内存映射文件可实现对文件内容的任意位置访问
+以下代码：定义数据仓库，数据仓库用于增加，查找表；以及增加，查找，修改，删除表中的数据对象，此数据仓库database的对象通过内存映射文件可实现对文件内容的任意位置访问
 </span>
 
 ```cpp
